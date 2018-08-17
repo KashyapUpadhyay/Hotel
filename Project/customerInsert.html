@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+#mdiv {
+	text-align: center;
+	position: relative;
+	top: 50px;
+	font-size: x-large;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#sub {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="customerInsert.php" method="post">
+    <p>
+        <label for="cust_id">Customer ID:</label>
+        <input type="text" name="cust_id" id="cust_id">
+    </p>
+    <p>
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname">
+    </p>
+    <p>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname">
+    </p>
+    <p>
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age">
+    </p>
+    <p>
+        <label for="contact_no">Contact Number:</label>
+        <input type="text" name="contact_no" id="contact_no">
+    </p>
+    <p>
+        <label for="email">Email Address:</label>
+        <input type="text" name="email" id="email">
+    </p>
+    <input id="sub" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

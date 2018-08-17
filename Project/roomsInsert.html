@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+#mdiv {
+	text-align: center;
+	position: relative;
+	top: 100px;
+	font-size: x-large;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#sub {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="roomsInsert.php" method="post">
+    <p>
+        <label for="room_no">Room ID:</label>
+        <input type="text" name="room_no" id="room_no">
+    </p>
+    <p>
+        <label for="room_type">Room Type:</label>
+        <input type="text" name="room_type" id="room_type">
+    </p>
+    <p>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price">
+    </p>
+    <p>
+        <label for="hotel_id">Hotel ID:</label>
+        <input type="text" name="hotel_id" id="hotel_id">
+    </p>
+    <input id="sub" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

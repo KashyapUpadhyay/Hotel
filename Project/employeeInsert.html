@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+#mdiv {
+	text-align: center;
+	position: relative;
+	top: 100px;
+	font-size: x-large;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#sub {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="employeeInsert.php" method="post">
+    <p>
+        <label for="emp_id">Employee ID:</label>
+        <input type="text" name="emp_id" id="emp_id">
+    </p>
+    <p>
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname">
+    </p>
+    <p>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname">
+    </p>
+    <p>
+        <label for="salary">Salary:</label>
+        <input type="text" name="salary" id="salary">
+    </p>
+    <p>
+        <label for="dept_id">Department ID:</label>
+        <input type="text" name="dept_id" id="dept_id">
+    </p>
+    <p>
+        <label for="hotel_id">Hotel ID:</label>
+        <input type="text" name="hotel_id" id="hotel_id">
+    </p>
+    <input id="sub" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

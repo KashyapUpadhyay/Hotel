@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Noam the Spell Checker</title>
+		<link rel="stylesheet" href="style.css">
+	
+	</head>
+
+	<body class="w3-indigo">
+		<div id="time" class="w3-diplay-top w3-slim w3-padding-large w3-card-8 w3-center"></div>
+		<div class="w3-container-12 w3-center w3-display-middle">
+
+			<div class="w3-card-8 w3-center w3-padding-large">
+				<div class="w3-card-8 w3-center w3-padding-xxlarge w3-teal" id="question">
+				</div><br/>
+
+				<div class="w3-btn-group w3-show-inline-block">
+  					<button class="w3-btn w3-hover-teal w3-cyan w3-padding-xxlarge" id="Button1" onclick="started(this.innerHTML)">Button1</button>
+  					<button class="w3-btn w3-hover-teal w3-cyan w3-padding-xxlarge" id="Button2" onclick="started(this.innerHTML)">Button2</button>
+				</div><br/>
+				<div class="w3-btn-group w3-show-inline-block">
+  					<button class="w3-btn w3-hover-teal w3-cyan w3-padding-xxlarge" id="Button3" onclick="started(this.innerHTML)">Button3</button>
+  					<button class="w3-btn w3-hover-teal w3-cyan w3-padding-xxlarge" id="Button4" onclick="started(this.innerHTML)">Button4</button>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			var time =5;
+			function startTimer(duration, display,reset) {
+			
+			var timer = duration, minutes, seconds;
+			if(rest=="true"){
+			 timer=duration;	
+			}
+			setInterval(function () {
+			minutes = parseInt(timer / 60, 10);
+			seconds = parseInt(timer % 60, 10);
+
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+
+			display.textContent = minutes + ":" + seconds;
+
+			if (--timer==-2 ) {
+				window.location.href="game.html";
+				alert("You're fired!");
+			}
+		}, 1000);}
+		
+			function shuffle(array) {
+  				var currentIndex = array.length, temporaryValue, randomIndex;
+
+  				// While there remain elements to shuffle...
+  				while (0 !== currentIndex) {
+
+    				// Pick a remaining element...
+   					randomIndex = Math.floor(Math.random() * currentIndex);
+    				currentIndex -= 1;
+
+    				// And swap it with the current element.
+    				temporaryValue = array[currentIndex];
+    				array[currentIndex] = array[randomIndex];
+    				array[randomIndex] = temporaryValue;
+  				}
+
+  				return array;
+			}
+
+			function start(){
+			
+				console.log("start");
+				var question = document.getElementById("question");
+				var array =['one','two','three','four']; //get this from backend
+				var array2=array.slice(0);
+				question.innerHTML=array2[0];
+				array = shuffle(array);
+				var buttons = document.querySelectorAll('button');
+				for (var i = array.length - 1; i >= 0; i--) {
+					buttons[i].innerHTML=array[i];
+				}
+			}
+
+			function started(answer){
+				display = document.querySelector('#time');
+				startTimer(time, display);
+		
+				var array =['one','two','three','four']; //get this from backend
+				var array2=array.slice(0);
+				array = shuffle(array);
+				var question = document.getElementById("question");
+				question.innerHTML=array2[0];
+				var buttons = document.querySelectorAll('button');
+				for (var i = array.length - 1; i >= 0; i--) {
+					buttons[i].innerHTML=array[i];
+				
+				}
+				
+				//alert(answer);
+				if(answer!=array2[0]){
+					alert("You're fired!");
+					window.location.href="game.html";
+				}
+			
+			}
+		
+
+window.onload = function () {
+	
+    
+        var display = document.querySelector('#time');
+		startTimer(time, display);
+		start();
+};
+
+
+		</script>
+
+	</body>
+</html>

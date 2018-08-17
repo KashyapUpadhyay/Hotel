@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+	#mdiv {
+	position: relative;
+	top: 100px;
+	text-align: center;
+	font-size: x-large;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#submit {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="dependentInsert.php" method="post">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+    </p>
+    <p>
+        <label for="sex">Sex :</label>
+        <input type="text" name="sex" id="sex">
+    </p>
+    <p>
+        <label for="birth_date">Birth Date:</label>
+        <input type="text" name="birth_date" id="birth_date">
+    </p>
+    <p>
+        <label for="relationship">Relationship:</label>
+        <input type="text" name="relationship" id="relationship">
+    </p>
+    <p>
+        <label for="emp_id">Employee ID:</label>
+        <input type="text" name="emp_id" id="emp_id">
+    </p>
+    <input id="submit" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

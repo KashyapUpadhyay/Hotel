@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+#mdiv {
+	text-align: center;
+	position: relative;
+	top: 100px;
+	font-size: x-large;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#sub {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="supplierInsert.php" method="post">
+    <p>
+        <label for="supplier_id">Supplier ID:</label>
+        <input type="text" name="supplier_id" id="supplier_id">
+    </p>
+    <p>
+        <label for="prod_id">Product ID :</label>
+        <input type="text" name="prod_id" id="prod_id">
+    </p>
+    <p>
+        <label for="prod_name">Product Name:</label>
+        <input type="text" name="prod_name" id="prod_name">
+    </p>
+    <input id="sub" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

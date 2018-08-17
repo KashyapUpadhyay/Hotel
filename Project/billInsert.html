@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+html{
+	background: url(img/insert.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#mdiv {
+	text-align: center;
+	position: relative;
+	top: 50px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size: x-large;
+}
+#submit {
+	background-color: #15C74B;
+	font-size: x-large;
+	width: 100px;
+	height: 50px;
+	border: thick outset #35C773;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+</style>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<div id="mdiv">
+<form action="billInsert.php" method="post">
+    <p>
+        <label for="bill_id">Bill ID:</label>
+        <input type="text" name="bill_id" id="bill_id">
+    </p>
+    <p>
+        <label for="laundry">Laundry Costs:</label>
+        <input type="text" name="laundry" id="laundry">
+    </p>
+    <p>
+        <label for="damages">Damages:</label>
+        <input type="text" name="damages" id="damages">
+    </p>
+    <p>
+        <label for="room_service">Room Service:</label>
+        <input type="text" name="room_service" id="room_service">
+    </p>
+    <p>
+        <label for="cust_id">Customer ID:</label>
+        <input type="text" name="cust_id" id="cust_id">
+    </p>
+    <p>
+        <label for="room_price">Room Price:</label>
+        <input type="text" name="room_price" id="room_price">
+    </p>
+    <input id="submit" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
